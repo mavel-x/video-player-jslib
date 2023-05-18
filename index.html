@@ -13,17 +13,17 @@
         align-items: stretch;
       }
       .player .screen {
-        flex-grow: 2;
+        flex-grow: 1;
       }
       .player .bottom-controls {
         background: black;
-        flex-grow: 0;
       }
       .player .player-button{
         border: none; 
         cursor: pointer; 
         color: white; 
         background-color: transparent;
+        font-size: 1.5rem;
       }
     </style>
   </head>
@@ -36,6 +36,12 @@
         </button>
         <button type="button" class="player-button pause js-pause-button">
           <i class="fa-sharp fa-solid fa-pause"></i>
+        </button>
+        <button type="button" class="player-button volume js-volume-button">
+          <i class="fa-sharp fa-solid fa-volume-xmark"></i>
+        </button>
+        <button type="button" class="player-button mute js-mute-button">
+          <i class="fa-sharp fa-solid fa-volume-up"></i>
         </button>
       </div>      
     </div>
