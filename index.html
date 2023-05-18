@@ -17,14 +17,19 @@
       }
       .player .bottom-controls {
         background: black;
+        display: flex;
+        padding-inline: 5px;
       }
-      .player .player-button{
+      .bottom-controls .player-button{
         border: none; 
         cursor: pointer; 
         color: white; 
         background-color: transparent;
         font-size: 1.5rem;
         margin: 0px 8px 10px;
+      }
+      .bottom-controls .empty-space {
+        flex-grow: 1;
       }
     </style>
   </head>
@@ -43,6 +48,10 @@
         </button>
         <button type="button" class="player-button mute js-mute-button">
           <i class="fa-sharp fa-solid fa-volume-up"></i>
+        </button>
+        <div class="empty-space"></div>
+        <button type="button" class="player-button fullscreen js-fullscreen-button">
+          <i class="fa-sharp fa-solid fa-expand"></i>
         </button>
       </div>      
     </div>
