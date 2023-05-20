@@ -21,7 +21,6 @@
       box-shadow: 0px 0px 8px 4px gray;
       display: flex;
       flex-direction: column;
-      align-items: stretch;
     }
     .player .screen {
       flex-grow: 1;
@@ -29,16 +28,18 @@
     .player .bottom-controls {
       background: black;
       display: flex;
-      padding-inline: 5px;
+      padding: 10px 5px;
+      align-items: center;
     }
     .bottom-controls .player-button{
       border: none; 
       cursor: pointer; 
       color: white; 
       background-color: transparent;
-      font-size: 1.5rem;
-      margin: 0px 8px 10px;
-      min-width: 30px;
+      font-size: 20px;
+      height: 40px;
+      width: 40px;
+      margin-inline: 1px;
     }
     .bottom-controls .empty-space {
       flex-grow: 1;
@@ -52,10 +53,10 @@
       <button type="button" class="player-button js-play-button">
         <i class="fa-sharp fa-solid fa-play"></i>
       </button>
-      <button type="button" class="player-button js-pause-button">
+      <button type="button" class="player-button js-pause-button" hidden>
         <i class="fa-sharp fa-solid fa-pause"></i>
       </button>
-      <button type="button" class="player-button js-volume-button">
+      <button type="button" class="player-button js-volume-button" hidden>
         <i class="fa-sharp fa-solid fa-volume-xmark"></i>
       </button>
       <button type="button" class="player-button js-mute-button">
