@@ -12,6 +12,10 @@
   <meta name="msapplication-config" content="icons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
   <title>Пример подключения плеера</title>
   <script src="https://kit.fontawesome.com/fb81e738e0.js" crossorigin="anonymous" defer></script>
   <style type="text/css">
@@ -40,8 +44,17 @@
       height: 41px;
       width: 36px;
     }
-    .bottom-controls .empty-space {
+    .bottom-controls .progress-bar{
       flex-grow: 1;
+      display: flex;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+    .bottom-controls .progress-bar .progress-slider{
+      flex-grow: 1;
+      display: flex;
+      color: white;
+      font-family: 'Roboto', sans-serif;
     }
   </style>
 </head> 
@@ -61,7 +74,11 @@
       <button type="button" class="player-button js-mute-button">
         <i class="fa-sharp fa-solid fa-xs fa-volume-high"></i>
       </button>
-      <div class="empty-space"></div>
+      <div class="progress-bar">
+        <div class="js-current-time"></div>
+        <div class="progress-slider"></div>
+        <div class="js-duration"></div>
+      </div>
       <button type="button" class="player-button js-fullscreen-button">
         <i class="fa-sharp fa-solid fa-sm fa-up-right-and-down-left-from-center"></i>
       </button>
