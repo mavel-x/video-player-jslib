@@ -44,25 +44,33 @@
       height: 41px;
       width: 36px;
     }
-    .bottom-controls .progress-bar{
+    .bottom-controls .progress-controls{
       flex-grow: 1;
       display: flex;
       color: white;
       font-family: 'Roboto', sans-serif;
     }
-    .bottom-controls .progress-bar .progress-slider{
+    .progress-controls .progress-slider{
       flex-grow: 1;
       padding-inline: 11px;
     }
-    .bottom-controls .progress-bar .progress-slider .progress-slider-base {
+    .progress-slider .progress-slider-base {
       display: flex;
       align-items: center;
       height: 20px;
     }
-    .bottom-controls .progress-bar .progress-slider .progress-slider-fill {
+    .progress-slider .progress-slider-fill {
       background-color: #f8104d;
       height: 5px;
       border-radius: 5px;
+    }
+    .progress-slider .slider-knob {
+      background-color: #f8104d;
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      border: solid white 3px;
+      margin-left: -8px;
     }
 
   </style>
@@ -83,11 +91,12 @@
       <button type="button" class="player-button js-mute-button">
         <i class="fa-sharp fa-solid fa-xs fa-volume-high"></i>
       </button>
-      <div class="progress-bar">
+      <div class="progress-controls">
         <div class="js-current-time"></div>
         <div class="progress-slider">
           <div class="progress-slider-base js-progress">
             <div class="progress-slider-fill js-progress-slider"></div>
+            <div class="slider-knob"></div>
           </div>
         </div>
         <div class="js-duration"></div>
