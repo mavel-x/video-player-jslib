@@ -52,9 +52,6 @@
     }
     .bottom-controls .progress-bar .progress-slider{
       flex-grow: 1;
-      display: flex;
-      color: white;
-      font-family: 'Roboto', sans-serif;
     }
   </style>
 </head> 
@@ -76,7 +73,11 @@
       </button>
       <div class="progress-bar">
         <div class="js-current-time"></div>
-        <div class="progress-slider"></div>
+        <div class="progress-slider">
+          <div class="js-progress" style="background-color: grey;">
+            <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
+          </div>
+        </div>
         <div class="js-duration"></div>
       </div>
       <button type="button" class="player-button js-fullscreen-button">
