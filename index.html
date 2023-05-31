@@ -52,7 +52,19 @@
     }
     .bottom-controls .progress-bar .progress-slider{
       flex-grow: 1;
+      padding-inline: 11px;
     }
+    .bottom-controls .progress-bar .progress-slider .progress-slider-base {
+      display: flex;
+      align-items: center;
+      height: 20px;
+    }
+    .bottom-controls .progress-bar .progress-slider .progress-slider-fill {
+      background-color: #f8104d;
+      height: 5px;
+      border-radius: 5px;
+    }
+
   </style>
 </head> 
 <body>
@@ -74,8 +86,8 @@
       <div class="progress-bar">
         <div class="js-current-time"></div>
         <div class="progress-slider">
-          <div class="js-progress" style="background-color: grey;">
-            <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
+          <div class="progress-slider-base js-progress">
+            <div class="progress-slider-fill js-progress-slider"></div>
           </div>
         </div>
         <div class="js-duration"></div>
